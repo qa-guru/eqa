@@ -23,16 +23,23 @@ $placeholder: #A5A5A5;
 	--article-padding: 16px;
 	--panel-padding: 32px;
 	--border-radius: 16px;
+	--input-padding: 18px 36px;
 
 	@media (max-width: 1024px) {
 		--grid-sides: 24px;
-		--grid-columns: 8;
+		--grid-columns: 2;
 	}
 
 	@media (max-width: 760px) {
 		--grid-gutter: 12px;
-		--grid-sides: 16px;
-		--grid-columns: 4;
+		--grid-sides: 12px;
+		--grid-columns: 1;
+		--section-padding: 16px;
+		--section-indents: 32px;
+		--article-padding: 12px;
+		--panel-padding: 16px;
+		--border-radius: 12px;
+		--input-padding: 12px 24px;
 	}
 }
 
