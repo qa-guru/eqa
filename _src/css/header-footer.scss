@@ -1,0 +1,46 @@
+.main-header {
+	flex-direction: column;
+	padding-top: 0;
+	padding-bottom: 0;
+	position: relative;
+	top: 36px;
+
+	.branding {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		.left {
+			flex: 0 0 32%;
+			margin-right: var(--grid-gutter);
+
+			picture {
+				>* {
+					mix-blend-mode: darken;
+				}
+			}
+		}
+
+		.right {
+			flex: 1 1 auto;
+		}
+
+		.logo {
+			font-weight: 900;
+			font-size: 8rem;
+			@include text-gradient;
+		}
+
+		.slogan {
+			font-size: 1.2rem;
+			line-height: 1.4;
+		}
+	}
+}
+
+.main-footer {
+	justify-content: space-between;
+	@include bg-gradient;
+	margin-top: 2rem;
+}

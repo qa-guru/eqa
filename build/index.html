@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+	<meta property="og:title" content="Project title here">
+	<meta property="og:description" content="Project description here">
+	<title>Project</title>
+</head>
+
+<body>
+	<header class="main-header">
+		<div class="branding">
+	<div class="left">
+		<picture>
+			<source srcset="img/image_main.webp">
+			<source srcset="img/image_main_mobile.webp" media="(min-width: 760px)">
+			<img src="img/image_main.jpg">
+		</picture>
+	</div>
+	<div class="right">
+		<h1 class="logo">ebanoe.QA</h1>
+		<div class="slogan">
+			Компании проебывают миллионы,<br>
+			ну а как если не матом?
+		</div>
+	</div>
+</div>
+	</header>
+
+
+<main class="main-block category home">
+	<div class="form subscribe">
+	<div class="left">
+		<h3>Подписаться на рассылку</h3>
+		<p>Если ты красавчик, то подпишись </p>
+	</div>
+	<div class="right">
+		<form action="#">
+			<input type="e-mail" placeholder="Введи свой e-mail">
+			<button>Отправить</button>
+		</form>
+	</div>
+</div>
+
+	<div class="content-wrapper">
+		<div class="section-title">
+			<h2>Сочные новости</h2>
+		</div>
+		<section class="posts">
+			<article class="simple">
+	<a href="#" class="post-link"></a>
+	<div class="post-picture">
+		<img src="img/test-img.jpg">
+	</div>
+	<div class="content">
+		<h3>Собеседования на позицию QA Automation Engineer или как нассать в офисную кофемашину</h3>
+		<p>Про тупорылые вопросы на собесе и как компании теряют миллионы из-за слепого доверия</p>
+	</div>
+</article>
+
+			<article class="simple">
+	<a href="#" class="post-link"></a>
+	<div class="post-picture">
+		<img src="img/test-img.jpg">
+	</div>
+	<div class="content">
+		<h3>Собеседования на позицию QA Automation Engineer или как нассать в офисную кофемашину</h3>
+		<p>Про тупорылые вопросы на собесе и как компании теряют миллионы из-за слепого доверия</p>
+	</div>
+</article>
+
+			<article class="simple">
+	<a href="#" class="post-link"></a>
+	<div class="post-picture">
+		<img src="img/test-img.jpg">
+	</div>
+	<div class="content">
+		<h3>Собеседования на позицию QA Automation Engineer или как нассать в офисную кофемашину</h3>
+		<p>Про тупорылые вопросы на собесе и как компании теряют миллионы из-за слепого доверия</p>
+	</div>
+</article>
+
+			<article class="simple">
+	<a href="#" class="post-link"></a>
+	<div class="post-picture">
+		<img src="img/test-img.jpg">
+	</div>
+	<div class="content">
+		<h3>Собеседования на позицию QA Automation Engineer или как нассать в офисную кофемашину</h3>
+		<p>Про тупорылые вопросы на собесе и как компании теряют миллионы из-за слепого доверия</p>
+	</div>
+</article>
+
+			<article class="simple">
+	<a href="#" class="post-link"></a>
+	<div class="post-picture">
+		<img src="img/test-img.jpg">
+	</div>
+	<div class="content">
+		<h3>Собеседования на позицию QA Automation Engineer или как нассать в офисную кофемашину</h3>
+		<p>Про тупорылые вопросы на собесе и как компании теряют миллионы из-за слепого доверия</p>
+	</div>
+</article>
+
+		</section>
+	</div>
+	<div class="form share">
+	<div class="left">
+		<h3>Поделиться смехуечками</h3>
+		<p>Присылай смешные истории или картинки.<br>Самый годный контен размещу в блоге.</p>
+	</div>
+	<div class="right">
+		<form action="#">
+			<div class="input-group">
+			<input type="text" placeholder="Предложить новость">
+			<input type="file" placeholder="Прикрепить файл">
+			</div>
+			<button>Отправить</button>
+		</form>
+	</div>
+</div>
+
+</main>
+
+
+<footer class="main-footer">
+	<div class="copyright">
+		© EBANOE.QA
+	</div>
+	<div class="email">
+		<a href="mailto:wenoreplay©ebanoe.qa">wenoreplay©ebanoe.qa</a>
+	</div>
+</footer>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>
+
+<script>
+	const bodyGrid = document.querySelector("body");
+
+	function showGrid(){
+		bodyGrid.classList.toggle("show-grid");
+	}
+</script>
+<div id="grid-btn" onclick="showGrid()">GRID</div>
