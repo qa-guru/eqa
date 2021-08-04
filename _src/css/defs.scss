@@ -30,6 +30,10 @@ $placeholder: #A5A5A5;
 		--grid-columns: 2;
 	}
 
+	@media (max-width: 1240px) {
+	--input-padding: 16px 24px;
+	}
+
 	@media (max-width: 760px) {
 		--grid-gutter: 12px;
 		--grid-sides: 12px;

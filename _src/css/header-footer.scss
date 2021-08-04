@@ -52,13 +52,19 @@
 			font-weight: 900;
 			font-size: 8rem;
 			@include text-gradient;
+			@media (max-width: 1240px) {
+				font-size: 6.5rem;
+			}
 			@media (max-width: 1024px) {
 				font-size: 5.5rem;
 			}
 
 			@media (max-width: 760px) {
-				font-size: 3rem;
+				font-size: 4.5rem;
 				display: inline;
+			}
+			@media (max-width: 560px) {
+				font-size: 3rem;
 			}
 		}
 
