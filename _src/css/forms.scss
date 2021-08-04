@@ -70,6 +70,14 @@
 			background: $blue;
 			color: $white;
 			font-weight: 700;
+			transition-property: background;
+			@include transition-out;
+			&:hover {
+				background: $blue-2;
+				transition-property: background;
+				@include transition-in;
+			}
+
 		}
 	}
 
