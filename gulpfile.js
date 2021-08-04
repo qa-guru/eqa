@@ -124,10 +124,10 @@ function images() {
 		.pipe(browsersync.stream())
 }
 
-function fonts() {
-	src(path.src.fonts)
-		.pipe(dest(path.build.fonts))
-}
+// function fonts() {
+// 	src(path.src.fonts)
+// 		.pipe(dest(path.build.fonts))
+// }
 
 
 
@@ -144,11 +144,12 @@ function clean(params) {
 }
 
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+// let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
-exports.fonts = fonts;
+// exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
 exports.css = css;
