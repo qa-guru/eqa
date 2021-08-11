@@ -54,9 +54,11 @@
 				color: $blue;
 				font-weight: 400;
 				font-size: 0.85rem;
-				padding: 0.4em 0.6em;
+				padding: 0.4em 1.2em;
 				border: 1px solid $blue;
 				border-radius: var(--border-radius);
+				display: block;
+				text-align: center;
 				transition-property: color, border;
 				@include transition-out;
 
@@ -93,9 +95,7 @@
 					transition-property: background, border;
 					@include transition-in;
 				}
-
 			}
-
 		}
 	}
 }

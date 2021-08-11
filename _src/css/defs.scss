@@ -95,6 +95,7 @@ a, a:hover, a:focus, a:active {
 @mixin text-gradient {
 	color: transparent;
 	background-clip: text;
+	-webkit-background-clip: text;
 	background-image: linear-gradient(90deg, #0250C5 0%, #FF4E9D 100%);
 }
 
