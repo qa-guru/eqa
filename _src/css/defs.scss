@@ -24,7 +24,8 @@ $placeholder: #A5A5A5;
 	--article-padding: 16px;
 	--panel-padding: 32px;
 	--border-radius: 16px;
-	--input-padding: 18px 36px;
+	--input-padding: 18px 8px;
+	--input-padding2: 18px 32px;
 
 	@media (max-width: 1024px) {
 		--grid-sides: 24px;
@@ -32,7 +33,9 @@ $placeholder: #A5A5A5;
 	}
 
 	@media (max-width: 1240px) {
-	--input-padding: 16px 24px;
+	--input-padding: 16px 8px;
+	--input-padding2: 16px 24px;
+
 	}
 
 	@media (max-width: 760px) {
@@ -44,7 +47,9 @@ $placeholder: #A5A5A5;
 		--article-padding: 12px;
 		--panel-padding: 16px;
 		--border-radius: 12px;
-		--input-padding: 12px 24px;
+		--input-padding: 12px 8px;
+		--input-padding2: 12px 8px;
+
 	}
 }
 
