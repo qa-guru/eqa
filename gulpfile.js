@@ -1,6 +1,5 @@
 let project_folder = "build";
 let source_folder = "_src";
-let wp_folder = "wordpress-theme/" + require("path").basename(__dirname);
 
 let path = {
 	build: {
@@ -23,14 +22,6 @@ let path = {
 		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}"
 	},
-	wordpress: {
-		html: wp_folder + "/",
-		css: wp_folder + "/css/",
-		js: wp_folder + "/js/",
-		img: wp_folder + "/img/",
-		fonts: wp_folder + "/fonts/"
-	},
-
 	clean: ["./" + project_folder + "/", "./wordpress-theme/"]
 }
 
@@ -68,7 +59,6 @@ function html() {
 		.pipe(fileinclude())
 		// .pipe(webphtml())
 		.pipe(dest(path.build.html))
-		.pipe(dest(path.wordpress.html))
 		.pipe(browsersync.stream())
 }
 function css() {
@@ -85,31 +75,18 @@ function css() {
 				cascade: true
 			})
 		)
-		// .pipe(dest(path.build.css))
-		// .pipe(clean_css())
-		.pipe(
-			rename({
-				extname: ".min.css"
-			})
-			)
+		.pipe(clean_css())
 		.pipe(dest(path.build.css))
-		.pipe(dest(path.wordpress.css))
 		.pipe(browsersync.stream())
 }
 function js() {
 	return src(path.src.js)
 		.pipe(fileinclude())
-		// .pipe(dest(path.build.js))
-		// .pipe(
-		// 	uglify()
-		// 	)
+		.pipe(dest(path.build.js))
 		.pipe(
-			rename({
-				extname: ".min.js"
-			})
+			uglify()
 			)
 		.pipe(dest(path.build.js))
-		.pipe(dest(path.wordpress.js))
 		.pipe(browsersync.stream())
 }
 
@@ -133,8 +110,6 @@ function images() {
 
 		.pipe(gulp.dest(path.build.img))
 		.pipe(dest(path.build.img))
-		.pipe(gulp.dest(path.wordpress.img))
-		.pipe(dest(path.wordpress.img))
 		.pipe(browsersync.stream())
 }
 
@@ -158,10 +133,8 @@ function clean(params) {
 }
 
 
-// let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let build = gulp.series(clean, gulp.parallel(js, css, html, images));
 let watch = gulp.parallel(build, watchFiles, browserSync);
-let wordpress = gulp.series(clean);
 
 
 // exports.fonts = fonts;
@@ -171,5 +144,4 @@ exports.css = css;
 exports.html = html;
 exports.build = build;
 exports.watch = watch;
-exports.wordpress = wordpress;
 exports.default = watch;
